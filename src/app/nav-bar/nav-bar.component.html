@@ -3,8 +3,9 @@
     <a class="navbar-brand" routerLink="/">Dating App</a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
 
-       <ng-container *ngIf="currentUser$ | async">
+
         <ul class="navbar-nav me-auto mb-2 mb-md-0" >
+          <ng-container *ngIf="currentUser$ | async">
           <li class="nav-item">
             <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches</a>
           </li>
@@ -14,8 +15,11 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/messages" routerLinkActive="active" >Messages</a>
           </li>
+        </ng-container>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/errors" routerLinkActive="active" >Errors</a>
+        </li>
         </ul>
-       </ng-container>
 
 
       <div class="dropdown" *ngIf="(currentUser$ | async) as user" dropdown>
