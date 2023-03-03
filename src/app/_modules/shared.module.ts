@@ -16,13 +16,13 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     ToastrModule.forRoot({
       positionClass : 'toast-bottom-right'
     }),
-    NgxGalleryModule
+    NgxGalleryModule,
   ],
   exports:[
     BsDropdownModule,
     ToastrModule,
     TabsModule,
-    NgxGalleryModule
+    NgxGalleryModule,
   ]
 })
 export class SharedModule { }
