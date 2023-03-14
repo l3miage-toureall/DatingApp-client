@@ -28,6 +28,7 @@
               "./node_modules/font-awesome/css/font-awesome.min.css",
               "./node_modules/bootswatch/dist/united/bootstrap.css",
               "./node_modules/ngx-toastr/toastr.css",
+              "./node_modules/ng2-file-upload/file-uploader.class.d.ts",
               "src/styles.css"
             ],
             "scripts": []
