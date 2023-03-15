@@ -25,7 +25,7 @@ import { MemberCardComponent } from './members/member-card/member-card.component
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
-import { FileUploader } from 'ng2-file-upload';
+import { FileUploader, FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -45,7 +45,6 @@ import { FileUploader } from 'ng2-file-upload';
     MemberCardComponent,
     MemberEditComponent,
     PhotoEditorComponent,
-    FileUploader,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +54,6 @@ import { FileUploader } from 'ng2-file-upload';
     TooltipModule.forRoot(),
     BrowserAnimationsModule,
     SharedModule,
-    FileUploader,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass : ErrorInterceptor, multi : true},
