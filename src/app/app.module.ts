@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -26,6 +26,8 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploader, FileUploadModule } from 'ng2-file-upload';
+import { TextInputComponent } from './_form/text-input/text-input.component';
+import { DatedatePickerComponent } from './_form/datedate-picker/datedate-picker.component';
 
 
 
@@ -45,6 +47,8 @@ import { FileUploader, FileUploadModule } from 'ng2-file-upload';
     MemberCardComponent,
     MemberEditComponent,
     PhotoEditorComponent,
+    TextInputComponent,
+    DatedatePickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,7 @@ import { FileUploader, FileUploadModule } from 'ng2-file-upload';
     TooltipModule.forRoot(),
     BrowserAnimationsModule,
     SharedModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass : ErrorInterceptor, multi : true},
