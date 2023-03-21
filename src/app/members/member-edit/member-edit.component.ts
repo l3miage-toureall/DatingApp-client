@@ -21,7 +21,7 @@ export class MemberEditComponent implements OnInit {
     }
   };
 
-  member : Member | undefined;
+  member : Member| undefined;
   user: User | null = null;
 
   constructor( private accountService: AcountService, private memberService: MembersService,
@@ -54,6 +54,6 @@ export class MemberEditComponent implements OnInit {
 
     }
 
-    
+
 
 }
